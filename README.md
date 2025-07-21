@@ -1,40 +1,68 @@
-🚗 Car Number Plate Detection using OpenCV & Python
-A real-time vehicle license plate detection system using image processing and computer vision techniques. This project detects car number plates from images or video streams using Haar cascades and OpenCV.
+🧏‍♂️ Sign Language Detection using OpenCV and CNN
+A real-time Sign Language Alphabet Recognition system using a Convolutional Neural Network (CNN) and webcam input. This project interprets American Sign Language (ASL) hand signs and predicts the corresponding alphabet in real time.
 
 📌 Objective
-To automate the detection and extraction of car number plates from visual input (images or webcam feed), enabling future applications such as traffic monitoring, automated tolling, and law enforcement.
+To assist communication between deaf or hard-of-hearing individuals and the general population by recognizing static hand gestures representing alphabets using a webcam.
 
 🧠 Key Features
-🚘 Detects car number plates using Haar Cascade Classifier.
+🔤 Detects 26 letters (A–Z) of American Sign Language.
 
-🎥 Works in real-time via webcam or accepts image input.
+📷 Works live with webcam feed using OpenCV.
 
-🧾 Extracts and displays the number plate region.
+🧠 Trained CNN model for gesture classification.
 
-💾 Saves detected number plates as cropped image files.
+⏱️ Real-time prediction with fast frame processing.
 
-✅ Lightweight and runs on CPU (no need for GPU/Deep Learning).
+✅ User-friendly interface with overlay text on video stream.
 
-🛠️ Technologies Used
-Tool/Library	Purpose
-Python	Core language
-OpenCV	Image processing, object detection
-Haarcascade	Pre-trained classifier for number plate detection
+🛠️ Tech Stack
+Technology	Purpose
+Python	Programming language
+OpenCV	Webcam handling, image preprocessing
+TensorFlow/Keras	CNN model training and prediction
+NumPy	Image matrix operations
 
 📁 Project Structure
 
-Car-Number-Plate-detection/
+Sign-Language-Detection/
 │
-├── haarcascade_russian_plate_number.xml   # Pre-trained classifier
-├── main.py                                # Main detection script
-├── images/                                # Input images
-├── output/                                # Saved cropped number plates
-└── README.md                              # Documentation
+├── dataset/                         # Custom or ASL dataset
+├── model/                           # Saved CNN model
+├── train_model.py                   # Script to train the model
+├── predict.py                       # Real-time prediction via webcam
+├── utils.py                         # Preprocessing and helper functions
+└── README.md
 🚀 How to Run
 🔧 Requirements
 
-pip install opencv-python
-▶️ Running the Script
+pip install opencv-python tensorflow numpy
+▶️ Train the Model (if needed)
 
-python main.py
-The webcam will start. Show a vehicle number plate in front of the camera and the system will detect and save the cropped image automatically.
+python train_model.py
+▶️ Run the Live Detector
+python predict.py
+Show a hand gesture (A–Z) in front of the camera and it will predict the alphabet.
+
+🧠 Model Details
+CNN with convolutional + pooling layers
+
+Dense layer with softmax activation for 26-class output
+
+Trained on labeled ASL dataset
+
+Normalized input images (gray-scaled and resized)
+
+📸 Sample Output
+(Add a screenshot or GIF showing live prediction — this really helps.)
+
+🧭 Future Improvements
+🔢 Add support for numbers (0–9)
+
+🔡 Build word/sentence recognition using sequence modeling (RNN/LSTM)
+
+🌐 Create a web or Android app for broader accessibility
+
+👨‍💻 Author
+Samarth Singh Adhikari
+📧 samarthadhikari216@gmail.com
+🔗 LinkedIn | GitHub
